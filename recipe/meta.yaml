@@ -1,5 +1,5 @@
 {% set name = "espnet" %}
-{% set version = "202205" %}
+{% set version = "202209" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/espnet-{{ version }}.tar.gz
-  sha256: c7bfc2e76a25bf67b82de7165e201861c8ca061e413715583bf84cb963576197
+  sha256: 50bd63b4d8a80badff5f00892a592474fc69fa4225d93044cf628f183ec4033a
 
 build:
   noarch: python
@@ -29,10 +29,12 @@ requirements:
     - filelock
     - h5py >=2.10.0
     - humanfriendly
+    - importlib-metadata <5.0
     - jamo >=0.4.1
     - kaldiio >=2.17.0
     - librosa >=0.8.0
     - nltk >=3.4.5
+    - protobuf <=3.20.1
     - pypinyin <=0.44.0
     - pysoundfile >=0.10.2
     - python >=3.7
