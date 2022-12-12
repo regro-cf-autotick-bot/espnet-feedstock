@@ -1,5 +1,5 @@
 {% set name = "espnet" %}
-{% set version = "202209" %}
+{% set version = "202211" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/espnet-{{ version }}.tar.gz
-  sha256: 50bd63b4d8a80badff5f00892a592474fc69fa4225d93044cf628f183ec4033a
+  sha256: a4cf23d14a0d478065c1a15c9dac0207b98064a64a1c7dde203918033478104b
 
 build:
   noarch: python
