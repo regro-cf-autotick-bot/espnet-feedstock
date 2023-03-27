@@ -1,5 +1,5 @@
 {% set name = "espnet" %}
-{% set version = "202211" %}
+{% set version = "202301" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/espnet-{{ version }}.tar.gz
-  sha256: a4cf23d14a0d478065c1a15c9dac0207b98064a64a1c7dde203918033478104b
+  sha256: 424cc24a8ea37900761761598e985d9e02007813497ab23c5ea03ba3a87b9699
 
 build:
   noarch: python
@@ -24,16 +24,19 @@ requirements:
     - ci-sdr
     - configargparse >=1.2.1
     - ctc-segmentation >=1.6.6
+    - editdistance >=0.6.2
     - espnet-tts-frontend
     - fast-bss-eval ==0.1.3
     - filelock
     - h5py >=2.10.0
     - humanfriendly
+    - hydra-core >=1.3.2
     - importlib-metadata <5.0
     - jamo >=0.4.1
     - kaldiio >=2.17.0
     - librosa >=0.8.0
     - nltk >=3.4.5
+    - opt-einsum >=3.0.0
     - protobuf <=3.20.1
     - pypinyin <=0.44.0
     - pysoundfile >=0.10.2
