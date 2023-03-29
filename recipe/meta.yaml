@@ -48,7 +48,7 @@ requirements:
     - scipy >=1.4.1
     - sentencepiece
     - torch-complex
-    - typeguard >=2.7.0
+    - typeguard ==2.13.3
 
 test:
   imports:
