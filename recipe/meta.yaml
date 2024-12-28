@@ -6,20 +6,20 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/espnet-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/espnet-{{ version }}.tar.gz
   sha256: 424cc24a8ea37900761761598e985d9e02007813497ab23c5ea03ba3a87b9699
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - numpy <=1.21.3
     - pip
     - pytest-runner
-    - python >=3.7
+    - python {{ python_min }}
   run:
     - ci-sdr
     - configargparse >=1.2.1
@@ -40,7 +40,7 @@ requirements:
     - protobuf <=3.20.1
     - pypinyin <=0.44.0
     - pysoundfile >=0.10.2
-    - python >=3.7
+    - python >={{ python_min }}
     - pytorch >=1.3.0
     - pytorch-wpe
     - pyworld >=0.2.10
@@ -58,6 +58,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: http://github.com/espnet/espnet
